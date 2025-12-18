@@ -18,7 +18,7 @@ public partial class Screen : Form
     private void NewNoteButton_Click(object sender, EventArgs e)
     {
         var rng = new Random();
-        var newNote = new Card(Cards.Count);
+        var newNote = new Card();
         newNote.Location = new Point(rng.Next(0, this.Width-200), rng.Next(0, this.Height-200));
         Cards.Add(newNote);
         this.Controls.Add(newNote);
@@ -40,18 +40,16 @@ public partial class Screen : Form
     {
         var fs = new FileStream("cards.csv", FileMode.Open);
         var sr = new StreamReader(fs);
-        var newCards = sr.ReadToEnd().Split("\n");
+        var newCards = sr.ReadToEnd().Split("\r\n");
         foreach (var text in newCards)
         {
-            if (text != "")
-            {
-                var rng = new Random();
-                var newNote = new Card(Cards.Count);
-                newNote.Location = new Point(rng.Next(0, this.Width - 200), rng.Next(0, this.Height - 200));
-                newNote.Text = text;
-                Cards.Add(newNote);
-                this.Controls.Add(newNote);
-            }
+            if (text == "") continue;
+            var rng = new Random();
+            var newNote = new Card();
+            newNote.Location = new Point(rng.Next(0, this.Width - 200), rng.Next(0, this.Height - 200));
+            newNote.CardText.Text = text;
+            Cards.Add(newNote);
+            this.Controls.Add(newNote);
         }
         sr.Close();
         fs.Close();

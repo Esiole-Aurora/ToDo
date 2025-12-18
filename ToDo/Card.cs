@@ -5,17 +5,16 @@ namespace ToDo;
 public partial class Card : UserControl
 {
     
-    public int Index = 0;
-    public Card(int index)
+    public Card()
     {
         InitializeComponent();
-        Index = index;
+
     }
 
 
     private void CLEAR_Click(object sender, EventArgs e)
     {
-        Screen.Cards.RemoveAt(Index);
+        Screen.Cards.Remove(this);
         this.Controls.Clear();
         this.Dispose();
     }
