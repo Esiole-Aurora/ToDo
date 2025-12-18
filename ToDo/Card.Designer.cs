@@ -87,7 +87,7 @@ partial class Card
     private System.Windows.Forms.Button MoveButton;
 
     private System.Windows.Forms.Button CLEAR;
-    private System.Windows.Forms.RichTextBox CardText;
+    public System.Windows.Forms.RichTextBox CardText;
 
     #endregion
 }

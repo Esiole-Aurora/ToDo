@@ -4,14 +4,18 @@ namespace ToDo;
 
 public partial class Card : UserControl
 {
-    public Card()
+    
+    public int Index = 0;
+    public Card(int index)
     {
         InitializeComponent();
+        Index = index;
     }
 
 
     private void CLEAR_Click(object sender, EventArgs e)
     {
+        Screen.Cards.RemoveAt(Index);
         this.Controls.Clear();
         this.Dispose();
     }
@@ -27,10 +31,8 @@ public partial class Card : UserControl
     }
     private void MoveButton_MouseMove(object sender, MouseEventArgs e)
     {
-        if (e.Button == MouseButtons.Left)
-        {
-            this.Left = e.X + this.Left - _mouseDownLocation.X;
-            this.Top = e.Y + this.Top - _mouseDownLocation.Y;
-        }
+        if (e.Button != MouseButtons.Left) return;
+        this.Left = e.X + this.Left - _mouseDownLocation.X;
+        this.Top = e.Y + this.Top - _mouseDownLocation.Y;
     }
 }

@@ -56,6 +56,8 @@ partial class Screen
         ClientSize = new System.Drawing.Size(802, 453);
         Controls.Add(NewNoteButton);
         Text = "ToDo";
+        FormClosing += Screen_Close;
+        Load += Screen_Load;
         Resize += Screen_Resize;
         ResumeLayout(false);
     }
