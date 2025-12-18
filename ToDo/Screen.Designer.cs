@@ -34,9 +34,9 @@ partial class Screen
         // 
         // NewNoteButton
         // 
-        NewNoteButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+        NewNoteButton.BackColor = System.Drawing.Color.LemonChiffon;
         NewNoteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-        NewNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+        NewNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         NewNoteButton.Font = new System.Drawing.Font("Courier New", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         NewNoteButton.ForeColor = System.Drawing.SystemColors.ControlText;
         NewNoteButton.Location = new System.Drawing.Point(720, 380);

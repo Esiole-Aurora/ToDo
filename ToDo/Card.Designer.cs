@@ -38,8 +38,9 @@ partial class Card
         // 
         // CLEAR
         // 
-        CLEAR.BackColor = System.Drawing.Color.Ivory;
+        CLEAR.BackColor = System.Drawing.Color.LemonChiffon;
         CLEAR.Cursor = System.Windows.Forms.Cursors.Hand;
+        CLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         CLEAR.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         CLEAR.Location = new System.Drawing.Point(71, 107);
         CLEAR.Name = "CLEAR";
@@ -51,7 +52,7 @@ partial class Card
         // 
         // CardText
         // 
-        CardText.BackColor = System.Drawing.Color.Ivory;
+        CardText.BackColor = System.Drawing.Color.LemonChiffon;
         CardText.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)0));
         CardText.Location = new System.Drawing.Point(0, 0);
         CardText.Name = "CardText";
@@ -61,8 +62,9 @@ partial class Card
         // 
         // MoveButton
         // 
-        MoveButton.BackColor = System.Drawing.Color.Ivory;
+        MoveButton.BackColor = System.Drawing.Color.LemonChiffon;
         MoveButton.Cursor = System.Windows.Forms.Cursors.SizeAll;
+        MoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         MoveButton.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         MoveButton.Location = new System.Drawing.Point(0, 107);
         MoveButton.Name = "MoveButton";
